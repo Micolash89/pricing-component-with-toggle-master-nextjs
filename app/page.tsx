@@ -1,9 +1,16 @@
 
 export default function Home() {
   return <>
+
+<header>
     Our Pricing
   Annually
   Monthly
+  </header>  
+
+  <main>
+
+<section>
 
   Basic
   &dollar;19.99
@@ -12,6 +19,9 @@ export default function Home() {
   2 Users Allowed
   Send up to 3 GB
   Learn More
+</section>
+
+<section>
 
   Professional
   &dollar;24.99
@@ -20,6 +30,9 @@ export default function Home() {
   5 Users Allowed
   Send up to 10 GB
   Learn More
+</section>
+
+<section>
 
   Master
   &dollar;39.99
@@ -28,11 +41,13 @@ export default function Home() {
   10 Users Allowed
   Send up to 20 GB
   Learn More
-  
-  <div className="attribution">
+</section>
+  </main>
+
+  <footer className="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </footer>
   
   </>;
 }
