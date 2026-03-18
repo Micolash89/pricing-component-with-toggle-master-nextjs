@@ -1,10 +1,38 @@
+"use client";
+import { Label } from "@/components/ui/label";
+import { Switch } from "@/components/ui/switch";
+
 export default function Home() {
   return (
     <>
-      <header>
-        <h1>Our Pricing</h1>
+      <header className="flex flex-col gap-8">
+        <h1 className="text-3xl font-bold text-center text-gray-neutral-650">
+          Our Pricing
+        </h1>
 
-        <section>Annually Monthly</section>
+        <section className="flex items-center justify-center gap-8">
+          <Label
+            htmlFor="subscribe"
+            className="text-gray-neutral-650/50 font-bold"
+          >
+            Annually
+          </Label>
+          <Switch
+            id="subscribe"
+            className="bg-linear-to-r from-violet-neutral to-violet-dark data-checked:bg-white"
+            defaultChecked={true}
+            onChange={() => {
+              // Aquí puedes manejar el cambio del estado del Switch
+              console.log("Estado del Switch:");
+            }}
+          />
+          <Label
+            htmlFor="subscribe"
+            className="text-gray-neutral-650/50 font-bold "
+          >
+            Monthly
+          </Label>
+        </section>
       </header>
 
       <main>

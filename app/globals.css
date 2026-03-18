@@ -6,6 +6,8 @@
 
 @theme inline {
   --color-primary-gradiente:var(--gradiente-primary);
+  --color-violet-neutral:var(--gradiente-violet-netral);
+  --color-violet-dark:var(--gradiente-violet-dark);
   --color-blue-neutral-50:var(--blue-neutral-50);
   --color-gray-neutral-650:var(--gray-neutral-650);
   --color-gray-neutral-700:var(--color-gray-neutral-700);
@@ -14,6 +16,8 @@
 :root {
 
   --gradiente-primary:hsl(237, 73%, 79%) to hsl(238, 63%, 64%);
+  --gradiente-violet-neutral:hsl(237, 73%, 79%) ;
+  --gradiente-violet-dark:hsl(238, 63%, 64%);
   --blue-neutral-50:hsl(240, 78%, 98%);
   --gray-neutral-650:hsl(233, 13%, 49%);
   --color-gray-neutral-700:hsl(232, 13%, 33%);
@@ -24,7 +28,12 @@
   
 }
 
-@layer base {
+body{
+  @apply sm:p-48 py-16 px-5;
+}
+
+
+/* @layer base {
   * {
     @apply border-border outline-ring/50;
   }
@@ -34,4 +43,4 @@
   html {
     @apply font-sans;
   }
-}
+} */
