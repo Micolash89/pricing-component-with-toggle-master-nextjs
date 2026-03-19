@@ -1,6 +1,8 @@
 "use client";
+import CardComponent from "@/components/CardComponent";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
+import { CARDSCONST } from "@/lib/definitions/const";
 
 export default function Home() {
   return (
@@ -36,11 +38,20 @@ export default function Home() {
       </header>
 
       <main>
-        <section>
-          <h3>Basic</h3>
 
-          <h4>&dollar;19.99</h4>
-          <h4>&dollar;199.99</h4>
+            {
+              CARDSCONST.map((card,index) => <CardComponent key={index+"CardComponent"} {...card} />)
+            }
+
+        <section className="flex flex-col gap-4  items-center">
+          <h3 className="text-xl">Basic</h3>
+
+          <h4 className="text-8xl flex items-center gap-2 font-semibold ">
+            <span className="text-6xl">$</span>
+            <span>19.99</span>
+          </h4>
+          
+          <h4 className="text-8xl">$ 199.99</h4>
 
           <span>500 GB Storage</span>
           <span>2 Users Allowed</span>
